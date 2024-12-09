@@ -1,0 +1,90 @@
+@tailwind base;
+@tailwind components;
+
+:root {
+    --bg-linear-gradient: linear-gradient(to right, #1f8ebe, #440495, #440495, #b102cd);
+}
+
+::-webkit-scrollbar {
+    @apply w-2;
+}
+
+::-webkit-scrollbar-track {
+    @apply bg-slate-200;
+}
+
+::-webkit-scrollbar-thumb {
+    @apply rounded-full bg-slate-400 cursor-grab active:cursor-grabbing;
+}
+
+.sidebar {
+    display: block;
+}
+
+.nav-link {
+    @apply flex items-center gap-3 rounded-md py-4 px-2 hover:bg-red-100 mb-2 transition-none;
+}
+
+.nav-link.active {
+    @apply text-white;
+    background: var(--bg-linear-gradient);
+}
+
+.main-content {
+    margin-left: 16.25%;
+}
+
+.card-img {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.apexcharts-legend{
+    display: none !important;
+}
+
+.apexcharts-datalabels > *{
+    display: none !important;
+}
+
+.circle{
+    @apply w-4 h-4 rounded-sm border border-black bg-white rotate-[45deg]
+}
+
+.circle.active{
+    @apply bg-black
+}
+
+@media screen and (max-width: 992px) {
+    .card-img {
+        width: 50%;
+        margin: 0 auto;
+    }
+
+    .analytics-sec .analytics{
+        justify-content: center;
+    }
+
+    .analytics-sec .title,
+    .analytics-sec .desc{
+        text-align: center;
+    }
+
+    .analytics-sec .img img{
+        display: block;
+        margin: 0 auto;
+        width: 100%;
+    }
+    .crypto-item h4{
+        font-weight: 400;
+        font-size: 1.12rem;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .main-content {
+        margin-left: 0;
+    }
+}
+
+@tailwind utilities;
